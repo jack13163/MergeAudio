@@ -63,7 +63,8 @@ public class MainForm {
 						String content = txtInput.getText();
 						String audioPath = AudioHelper.translate(content);
 						// 音频合并到新的文件中
-						String filePath = "merged//" + content + ".wav";
+						String filePath = "merged//"
+								+ (content.length() > 10 ? content.substring(0, 10) + "..." : content) + ".wav";
 						String[] audioPaths = audioPath.split(",");
 
 						try {
